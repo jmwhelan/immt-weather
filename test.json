@@ -1,0 +1,254 @@
+{
+    "city": {
+        "id": 6077445,
+        "name": "Mont-Tremblant",
+        "coord": {
+            "lon": -74.6265,
+            "lat": 46.1949
+        },
+        "country": "CA",
+        "population": 8892,
+        "timezone": -14400
+    },
+    "cod": "200",
+    "message": 11.8482585,
+    "cnt": 11,
+    "list": [{
+        "dt": 1565283600,
+        "temp": {
+            "day": 31.78,
+            "min": 11.77,
+            "max": 31.78,
+            "night": 11.77,
+            "eve": 18.94,
+            "morn": 28.89
+        },
+        "pressure": 999.09,
+        "humidity": 53,
+        "weather": [{
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10d"
+        }],
+        "speed": 3.58,
+        "deg": 206,
+        "clouds": 28,
+        "rain": 7.69
+    }, {
+        "dt": 1565370000,
+        "temp": {
+            "day": 19.25,
+            "min": 10.25,
+            "max": 20.05,
+            "night": 10.25,
+            "eve": 13.16,
+            "morn": 12.97
+        },
+        "pressure": 1001.74,
+        "humidity": 67,
+        "weather": [{
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10d"
+        }],
+        "speed": 5.03,
+        "deg": 274,
+        "clouds": 63,
+        "rain": 4.75
+    }, {
+        "dt": 1565456400,
+        "temp": {
+            "day": 15.65,
+            "min": 7.47,
+            "max": 15.65,
+            "night": 7.47,
+            "eve": 12.55,
+            "morn": 10.25
+        },
+        "pressure": 1007.82,
+        "humidity": 72,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 5.04,
+        "deg": 318,
+        "clouds": 64,
+        "rain": 2.5
+    }, {
+        "dt": 1565542800,
+        "temp": {
+            "day": 23.64,
+            "min": 11.39,
+            "max": 23.64,
+            "night": 11.92,
+            "eve": 15.28,
+            "morn": 11.39
+        },
+        "pressure": 1008.96,
+        "humidity": 44,
+        "weather": [{
+            "id": 501,
+            "main": "Rain",
+            "description": "moderate rain",
+            "icon": "10d"
+        }],
+        "speed": 5.44,
+        "deg": 237,
+        "clouds": 95,
+        "rain": 4.19
+    }, {
+        "dt": 1565629200,
+        "temp": {
+            "day": 17.95,
+            "min": 6.42,
+            "max": 17.95,
+            "night": 6.42,
+            "eve": 12.85,
+            "morn": 12.73
+        },
+        "pressure": 1009.21,
+        "humidity": 48,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 5.1,
+        "deg": 303,
+        "clouds": 29
+    }, {
+        "dt": 1565715600,
+        "temp": {
+            "day": 20.68,
+            "min": 10.16,
+            "max": 20.68,
+            "night": 10.16,
+            "eve": 14.76,
+            "morn": 10.45
+        },
+        "pressure": 1014.15,
+        "humidity": 40,
+        "weather": [{
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }],
+        "speed": 2.97,
+        "deg": 297,
+        "clouds": 38
+    }, {
+        "dt": 1565802000,
+        "temp": {
+            "day": 14.86,
+            "min": 10.4,
+            "max": 17.44,
+            "night": 10.4,
+            "eve": 13.35,
+            "morn": 12.05
+        },
+        "pressure": 1011.23,
+        "humidity": 71,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 0.62,
+        "deg": 22,
+        "clouds": 100,
+        "rain": 0.88
+    }, {
+        "dt": 1565888400,
+        "temp": {
+            "day": 16.95,
+            "min": 4.81,
+            "max": 17.94,
+            "night": 4.81,
+            "eve": 12.21,
+            "morn": 12.35
+        },
+        "pressure": 1015.39,
+        "humidity": 59,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 3.77,
+        "deg": 307,
+        "clouds": 43,
+        "rain": 0.94
+    }, {
+        "dt": 1565974800,
+        "temp": {
+            "day": 13.72,
+            "min": 4.87,
+            "max": 14.92,
+            "night": 4.87,
+            "eve": 9.78,
+            "morn": 7.21
+        },
+        "pressure": 1021.54,
+        "humidity": 56,
+        "weather": [{
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04d"
+        }],
+        "speed": 3.12,
+        "deg": 303,
+        "clouds": 59
+    }, {
+        "dt": 1566061200,
+        "temp": {
+            "day": 14.89,
+            "min": 5.76,
+            "max": 16.25,
+            "night": 5.76,
+            "eve": 10.72,
+            "morn": 8.11
+        },
+        "pressure": 1021.26,
+        "humidity": 60,
+        "weather": [{
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10d"
+        }],
+        "speed": 3.59,
+        "deg": 300,
+        "clouds": 62
+    }, {
+        "dt": 1566147600,
+        "temp": {
+            "day": 20.41,
+            "min": 7.51,
+            "max": 20.41,
+            "night": 7.65,
+            "eve": 13.65,
+            "morn": 7.51
+        },
+        "pressure": 1019.69,
+        "humidity": 42,
+        "weather": [{
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }],
+        "speed": 4.23,
+        "deg": 331,
+        "clouds": 39
+    }]
+}
