@@ -6,22 +6,18 @@ const request = require('request');
 const path = require('path');
 const _ = require("lodash");
 
-
 const nightmare = Nightmare({
     show: false
 });
-const url = 'https://www.mont-tremblant.ca/en/training-mont-tremblant';
 
+const url = 'https://www.mont-tremblant.ca/en/training-mont-tremblant';
 let config = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'config.json')));
 
 let prowlKey = config.prowlKey;
 let openWeatherMapKey = config.openWeatherMapKey;
 let city = config.city;
 let units = config.units;
-
 const prowl = new Prowl(prowlKey);
-
-
 
 const getWaterTemp = async () => {
     let getWaterTempData = html => {
@@ -29,7 +25,7 @@ const getWaterTemp = async () => {
         let temperature = $('a.temperature > div.sideText > div.info').text().split('C');
         temperature[0] = temperature[0] + "C";
         return temperature;
-    }
+    }   
 
     const result = await nightmare
         .goto(url)
@@ -39,7 +35,6 @@ const getWaterTemp = async () => {
         .then(response => {
             waterTemp = getWaterTempData(response)[0];
             return waterTemp;
-            //sendProwl(getData(response)[0]);
         }).catch(err => {
             console.log(err);
         });
@@ -48,7 +43,6 @@ const getWaterTemp = async () => {
 }
 
 let sendNotification = (temp, weather) => {
-
     let message = `Water: ${temp}, Forecast: ${weather}`;
     console.log(message);
     prowl.push(message, '2020 IMMT 140.6', {
@@ -71,20 +65,10 @@ function getWeather() {
 
         let dayCount = Math.ceil(Math.abs(immtDate - currentDate) / (1000 * 3600 * 24)) + 1;
 
-        // console.log(currentDate);
-
-
-        // console.log(dayCount);
-        // console.log(currentDate.toUTCString());
-
-        // console.log(immtDate.toUTCString());
-
         let getWeatherData = jsonString => {
-
             let json = JSON.parse(jsonString);
 
-
-            let dayWeather =  _.find(json.list, function(o) {
+            let dayWeather = _.find(json.list, function (o) {
                 return o.dt == immtDateSeconds;
             });
 
@@ -93,7 +77,6 @@ function getWeather() {
         }
 
         let url = `http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&appid=${openWeatherMapKey}&cnt=${dayCount}&units=${units}`;
-        //console.log(url);
 
         request(url, function (err, response, body) {
             if (err) {
@@ -107,9 +90,4 @@ function getWeather() {
 
 Promise.all([getWaterTemp(), getWeather()]).then(function (values) {
     sendNotification(values[0], values[1]);
-    console.log(values);
 });
-
-// getWaterTemp().then(a => console.log(a));
-
-// getWeather().then(a => console.log(a));
