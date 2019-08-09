@@ -43,14 +43,13 @@ const getWaterTemp = async () => {
 }
 
 let sendNotification = (temp, weather) => {
-    let message = `Water: ${temp}, Forecast: ${weather}`;
+    let message = `Water: ${temp.replace(" ", "")}, Forecast: ${weather}`;
     console.log(message);
     prowl.push(message, '2020 IMMT 140.6', {
         priority: 2,
         url: url
     }, function (err, remaining) {
         if (err) throw err;
-        console.log('I have ' + remaining + ' calls to the api during current hour. BOOM!');
     });
 }
 
