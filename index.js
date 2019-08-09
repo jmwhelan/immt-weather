@@ -70,7 +70,7 @@ function getWeather() {
                 return (d.getDate() == immtDate.getDate() && d.getMonth() == immtDate.getMonth());
             });
 
-            let weatherString = `L: ${Math.trunc(dayWeather.temp.morn)}°C, H: ${Math.trunc(dayWeather.temp.max)}°C, E: ${Math.trunc(dayWeather.temp.eve)}°C, ${dayWeather.weather[0].description}, Wind: ${dayWeather.speed}kph`;
+            let weatherString = `L: ${Math.trunc(dayWeather.temp.morn)}°C, H: ${Math.trunc(dayWeather.temp.max)}°C, E: ${Math.trunc(dayWeather.temp.eve)}°C, ${dayWeather.weather[0].description}, Wind: ${Math.round(dayWeather.speed * 3.6)}kph`;
             return weatherString;
         }
 
