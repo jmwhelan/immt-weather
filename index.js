@@ -56,20 +56,18 @@ let sendNotification = (temp, weather) => {
 
 function getWeather() {
     return new Promise(function (resolve, reject) {
-        let currentDate = new Date();
-        currentDate.setUTCHours(17, 0, 0, 0);
+        let currentDate = new Date();        
+        let immtDate = new Date('08/18/2019');        
 
-        let immtDateSeconds = 1566147600;
-        let immtDate = new Date(0);
-        immtDate.setUTCSeconds(immtDateSeconds);
-
-        let dayCount = Math.ceil(Math.abs(immtDate - currentDate) / (1000 * 3600 * 24)) + 1;
+        let dayCount = Math.ceil(Math.abs(immtDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24)) + 1;
 
         let getWeatherData = jsonString => {
             let json = JSON.parse(jsonString);
 
             let dayWeather = _.find(json.list, function (o) {
-                return o.dt == immtDateSeconds;
+                let d = new Date(0);
+                d.setUTCSeconds(o.dt);
+                return (d.getDate() == immtDate.getDate() && d.getMonth() == immtDate.getMonth());
             });
 
             let weatherString = `L: ${Math.trunc(dayWeather.temp.morn)}°C, H: ${Math.trunc(dayWeather.temp.max)}°C, E: ${Math.trunc(dayWeather.temp.eve)}°C, ${dayWeather.weather[0].description}, Wind: ${dayWeather.speed}kph`;
