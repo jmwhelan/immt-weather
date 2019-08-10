@@ -58,7 +58,7 @@ function getWeather() {
         let currentDate = new Date();        
         let immtDate = new Date('08/18/2019');        
 
-        let dayCount = Math.ceil(Math.abs(immtDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24)) + 1;
+        let dayCount = Math.ceil(Math.abs(immtDate.getTime() - currentDate.getTime()) / (1000 * 3600 * 24)) + 2;
 
         let getWeatherData = jsonString => {
             let json = JSON.parse(jsonString);
